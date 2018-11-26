@@ -7,7 +7,7 @@ package pages;
 
 /**
  *
- * @author César
+ * @author Loli
  */
 public class LoginPage extends javax.swing.JFrame {
 
@@ -31,7 +31,7 @@ public class LoginPage extends javax.swing.JFrame {
         lbLogin = new javax.swing.JLabel();
         lbUsuario = new javax.swing.JLabel();
         lbContrase = new javax.swing.JLabel();
-        btnIngresar = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
         texUsuario = new javax.swing.JTextField();
         texcontra = new javax.swing.JTextField();
         btnCancelar = new javax.swing.JButton();
@@ -50,11 +50,11 @@ public class LoginPage extends javax.swing.JFrame {
 
         lbContrase.setText("Contraseña:");
 
-        btnIngresar.setText("Ingresar ");
-        btnIngresar.setActionCommand("Iniciar");
-        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+        loginButton.setText("Ingresar ");
+        loginButton.setActionCommand("Iniciar");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarActionPerformed(evt);
+                loginButtonActionPerformed(evt);
             }
         });
 
@@ -88,7 +88,7 @@ public class LoginPage extends javax.swing.JFrame {
                             .addComponent(texcontra, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                             .addComponent(texUsuario)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnIngresar)
+                        .addComponent(loginButton)
                         .addGap(73, 73, 73)
                         .addComponent(btnCancelar)))
                 .addContainerGap(53, Short.MAX_VALUE))
@@ -110,7 +110,7 @@ public class LoginPage extends javax.swing.JFrame {
                     .addComponent(texcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnIngresar)
+                    .addComponent(loginButton)
                     .addComponent(btnCancelar))
                 .addGap(30, 30, 30))
         );
@@ -122,9 +122,11 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_texUsuarioActionPerformed
 
-    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIngresarActionPerformed
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        IncidentsPage incidentsPage = new IncidentsPage();
+        incidentsPage.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,11 +165,11 @@ public class LoginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnIngresar;
     private javax.swing.JLabel lbContrase;
     private javax.swing.JLabel lbEscritoLogin;
     private javax.swing.JLabel lbLogin;
     private javax.swing.JLabel lbUsuario;
+    private javax.swing.JButton loginButton;
     private javax.swing.JTextField texUsuario;
     private javax.swing.JTextField texcontra;
     // End of variables declaration//GEN-END:variables

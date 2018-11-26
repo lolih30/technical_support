@@ -7,7 +7,7 @@ package pages;
 
 /**
  *
- * @author César
+ * @author Loli
  */
 public class IncidentsPage extends javax.swing.JFrame {
 
@@ -40,7 +40,7 @@ public class IncidentsPage extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        exitMenuItem = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,9 +65,9 @@ public class IncidentsPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Lista de incidentes reportados");
 
-        jMenu1.setText("Incidents");
+        jMenu1.setText("Incidencias");
 
-        addIncidentMenuItem.setText("Add Incidents");
+        addIncidentMenuItem.setText("Agregar incidencia");
         addIncidentMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addIncidentMenuItemActionPerformed(evt);
@@ -77,18 +77,32 @@ public class IncidentsPage extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Options");
+        jMenu2.setText("Opciones");
 
-        jMenuItem2.setText("User Settings");
+        jMenuItem2.setText("Ajustes");
         jMenu2.add(jMenuItem2);
 
-        jMenuItem3.setText("Logout");
+        jMenuItem3.setText("Cerrar sesion");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Exit");
-        jMenuBar1.add(jMenu3);
+        exitMenuItem.setText("Salir");
+        exitMenuItem.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                exitMenuItemMenuSelected(evt);
+            }
+        });
+        jMenuBar1.add(exitMenuItem);
 
         setJMenuBar(jMenuBar1);
 
@@ -150,6 +164,14 @@ public class IncidentsPage extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_detailIncidentButtonActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void exitMenuItemMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_exitMenuItemMenuSelected
+        System.exit(0);
+    }//GEN-LAST:event_exitMenuItemMenuSelected
+
     /**
      * @param args the command line arguments
      */
@@ -188,13 +210,13 @@ public class IncidentsPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addIncidentMenuItem;
     private javax.swing.JButton detailIncidentButton;
+    private javax.swing.JMenu exitMenuItem;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;

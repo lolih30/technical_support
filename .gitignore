@@ -35,4 +35,7 @@ dist/
 nbdist/
 .nb-gradle/
 
+#Exclude libraries
+!libraries
+
 # End of https://www.gitignore.io/api/java,netbeans
